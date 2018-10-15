@@ -9,7 +9,7 @@ function check_and_update_flat(e)
 
 function update() {
     let hex = document.getElementById('hex').value;
-    if(hex == "" || hex.length != 7)
+    if(hex == "" || hex.length != 7 || hex[0] != "#")
     {
         alert("Invalid");
         document.getElementById('hex').value = "";
