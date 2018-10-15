@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check Flat Color</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            transition:all 1s;
+        }
+        .container {
+            font-size: 2em;
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial;
+        }
+        input[type="text"] {
+            height: 30px;
+            padding:5px;
+            margin-top: 10px;
+            border:none;
+            border-bottom: 2px solid #000;
+            outline: none;
+            font-weight: bolder;
+        }
+        input:focus {
+            outline:none;
+        }
+        input[type="submit"] {
+            height: 40px;
+            border:none;
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 40px;
+            background:none;
+            font-weight: bold;
+            border-radius: 3px;
+            background: #000;
+            color: #fff;
+        }
+        input[type="submit"]:hover {
+            cursor: pointer;
+        }
+        .answer {
+            margin-top:30px;
+        }
+        .wrapper {
+            height: 100vh;
+            width:300px;
+            background-color: #000;
+            transition:1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper"></div>
+    <div class="container">
+        Enter hex value :<br>
+        <input type="text" id="hex" onkeypress="check_and_update_flat(event)"> <br> <input type="submit" value="Submit" id="submit">
+        <br>
+        <div class="answer"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brain/0.6.3/brain.min.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
